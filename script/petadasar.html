@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../v6.15.1/ol.css" type="text/css">
+    <script src="../v6.15.1/ol.js"></script>
+</head>
+
+<body>
+    <div id="map" class="map" style="height: 400px; width: 100%; background-color: blueviolet;">
+    </div>
+</body>
+<script>
+    var myosm = new ol.layer.Tile({source: new ol.source.OSM()});
+    var myview = new ol.view
+    ({
+        center : ol.proj.fromLonLat([110.709896,-7.9533577]),
+        zoom: 12
+    });
+    var mylayer = [mysom];
+    var mymap = new ol.Map
+    ({
+        target : 'map',
+        layers : mylayer,
+        view : myview
+    });
+</script>
+</html>
